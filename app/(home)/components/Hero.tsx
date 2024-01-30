@@ -48,7 +48,6 @@ const Hero: React.FC = () => {
                 quality={100}
                 height={300}
                 className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
-
             />
         </section>
     );
