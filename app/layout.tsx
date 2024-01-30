@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import Footer from "@/components/nav/Footer";
 import { Inter } from "next/font/google";
 import LandingPageNavbar from "@/components/nav/LandingPageNavbar";
 import type { Metadata } from "next";
@@ -23,6 +24,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
         <NextThemeProvider>
           <LandingPageNavbar />
           {children}
+          <Footer />
         </NextThemeProvider>
       </body>
     </html>

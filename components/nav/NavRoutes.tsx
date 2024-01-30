@@ -24,6 +24,11 @@ const NavRoutes: React.FC<React.HTMLAttributes<HTMLElement>> = ({ className, ...
             href: `/#projects`,
             label: "Projects",
             active: pathname === `/#projects`,
+        },
+        {
+            href: `https://google.com`,
+            label: "Resume",
+            active: false,
         }
     ];
 
@@ -37,7 +42,7 @@ const NavRoutes: React.FC<React.HTMLAttributes<HTMLElement>> = ({ className, ...
                     <Link
                         href={route.href}
                         className={cn(
-                            "text-sm font-medium transition-colors hover:text-primary",
+                            "text-md font-medium transition-colors hover:text-primary",
                             route.active ? "text-sky-500" : "text-muted-foreground"
                         )}
                     >

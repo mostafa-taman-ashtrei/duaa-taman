@@ -2,11 +2,16 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 import Link from "next/link";
 
-const SocialMedia: React.FC = () => {
+interface SocialMediaProps {
+    text?: string
+    className?: string;
+}
+
+const SocialMedia: React.FC<SocialMediaProps> = ({ text }) => {
     return (
         <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-center items-center p-3">
             <h2 className="uppercase font-bold">
-                Connect With Me On
+                {text}
             </h2>
 
             <div className="flex gap-4">
