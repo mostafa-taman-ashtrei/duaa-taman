@@ -1,4 +1,5 @@
 import "./globals.css";
+import "simplebar-react/dist/simplebar.min.css";
 
 import Footer from "@/components/nav/Footer";
 import { Inter } from "next/font/google";

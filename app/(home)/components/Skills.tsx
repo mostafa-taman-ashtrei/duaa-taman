@@ -29,7 +29,7 @@ const mySkills = [
 const Skills: React.FC = () => {
     return (
         <section>
-            <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+            <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16" id="skills">
                 <h2 className="text-3xl font-bold tracki text-center sm:text-5xl dark:text-gray-50">
                     <GradientText text="Skills" />
                 </h2>

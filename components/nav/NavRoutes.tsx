@@ -26,6 +26,11 @@ const NavRoutes: React.FC<React.HTMLAttributes<HTMLElement>> = ({ className, ...
             active: pathname === `/#projects`,
         },
         {
+            href: `/#contact`,
+            label: "Contact Me",
+            active: false,
+        },
+        {
             href: `https://google.com`,
             label: "Resume",
             active: false,

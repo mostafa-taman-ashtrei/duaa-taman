@@ -19,7 +19,7 @@ const projectCategories = [
     {
         name: "Script Writing",
         icon: <Pencil className="text-pink-600" size={40} />,
-        url: "/videos",
+        url: "/scripts",
         desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur saepe laborum."
     },
     {
@@ -33,7 +33,7 @@ const projectCategories = [
 const Projects: React.FC = () => {
     return (
         <section>
-            <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-32">
+            <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-32" id="projects">
                 <h2 className="text-3xl font-bold tracki text-center sm:text-5xl dark:text-gray-50">
                     <GradientText text="Projects" />
                 </h2>
