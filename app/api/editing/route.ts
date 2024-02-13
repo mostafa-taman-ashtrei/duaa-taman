@@ -17,7 +17,5 @@ export const GET = async () => {
         })
         .catch(() => { throw new Error("Failed to make Cloudinary request"); });
 
-    console.log(data);
-
     return NextResponse.json(data);
 };
