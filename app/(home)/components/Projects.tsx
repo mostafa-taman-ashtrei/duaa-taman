@@ -7,7 +7,7 @@ const projectCategories = [
     {
         name: "Video Editing",
         icon: <Video className="text-pink-600" size={40} />,
-        url: "/videos",
+        url: "/editing",
         desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur saepe laborum."
     },
     {
@@ -25,7 +25,7 @@ const projectCategories = [
     {
         name: "Graphic Design",
         icon: <Brush className="text-pink-600" size={40} />,
-        url: "/videos",
+        url: "https://www.behance.net/doaataman1",
         desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur saepe laborum."
     },
 ];

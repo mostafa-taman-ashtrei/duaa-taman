@@ -10,7 +10,7 @@ const About: React.FC = () => {
                         <div className="relative h-64 sm:h-80 lg:h-full">
                             <Image
                                 alt="Hero Image For Duaa Taman"
-                                src="/images/hero-image.jpg"
+                                src="/images/about.jpeg"
                                 width={300}
                                 quality={100}
                                 height={300}
@@ -30,21 +30,21 @@ const About: React.FC = () => {
                             </h2>
 
                             <p className="mt-4 text-gray-600">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestiae! Quidem est
-                                esse numquam odio deleniti, beatae, magni dolores provident quaerat totam eos, aperiam
-                                architecto eius quis quibusdam fugiat dicta.
+                                I graduated from Cairo universty where I  majored in radio & tv with a GPA 3.8. However that is not all there is to
+                                the story, I am a relentless passionate hard worker who is always growing & learning.
 
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestiae! Quidem est
-                                esse numquam odio deleniti, beatae, magni dolores provident quaerat totam eos, aperiam
-                                architecto eius quis quibusdam fugiat dicta.
+                                I have already managed to land a few freelance clients, where I created, edited and published all kinds of video content
+                                by myself, talk about a one woman army. All that besides my other graphic design projects of course.
 
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestiae! Quidem est
-                                esse numquam odio deleniti, beatae, magni dolores provident quaerat totam eos, aperiam
-                                architecto eius quis quibusdam fugiat dicta.
 
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestiae! Quidem est
-                                esse numquam odio deleniti, beatae, magni dolores provident quaerat totam eos, aperiam
-                                architecto eius quis quibusdam fugiat dicta.
+                                <br />
+                                <br />
+
+                                My biggest strength? hmm If I had to pick one it would my ability to work on multiple projects
+                                simultaneously while providing the highest level of quality and innovation.
+
+                                I am a great team player thanks to my people skills. I aspire to work with like minded skilled individuals from all over the world
+                                so I can continue to grow and make a few friends along the way.
                             </p>
                         </div>
                     </div>

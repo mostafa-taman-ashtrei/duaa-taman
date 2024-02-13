@@ -30,10 +30,9 @@ const Hero: React.FC = () => {
                             </div>
                         </div>
 
-                        <p className="hidden text-gray-500 md:mt-4 md:block text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam
-                            sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
-                            quisque ut interdum tincidunt duis.
+                        <p className="hidden text-gray-500 md:my-4 md:block text-left">
+                            If you are looking for someone who can create & edit videos or someone who knows graphic design & can write scripts
+                            for any type of content you have come to the right place. Check out my social media below.
                         </p>
                     </div>
 
@@ -43,7 +42,7 @@ const Hero: React.FC = () => {
 
             <Image
                 alt="Hero Image For Duaa Taman"
-                src="/images/hero-image.jpg"
+                src="/images/hero 1.jpeg"
                 width={300}
                 quality={100}
                 height={300}

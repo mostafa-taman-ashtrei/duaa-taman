@@ -2,6 +2,7 @@ import { Brush, Camera, Pencil, Video } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import GradientText from "@/components/general/GradientText";
+import Link from "next/link";
 
 const mySkills = [
     {
@@ -41,17 +42,18 @@ const Skills: React.FC = () => {
                         </h2>
 
                         <p className="mt-4 text-gray-600">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut vero aliquid sint distinctio
-                            iure ipsum cupiditate? Quis, odit assumenda? Deleniti quasi inventore, libero reiciendis
-                            minima aliquid tempora. Obcaecati, autem.
+                            I already have many skills and I am always adding new ones to my arsenal. Here is my main
+                            set of skills. If you want more details you can check out my resume below.
                         </p>
 
-                        <Button
+                        <Link href="https://drive.google.com/file/d/1ha6FX42BSepKRtMuxu9FwaRyDIHE7ebI/view" target="_">
+                            <Button
+                                className="mt-8 inline-block rounded gradient-primary bg-gradient-to-l hover:scale-110 px-12 py-3 text-sm font-medium text-white transition"
+                            >
+                                Download My Resume
+                            </Button>
+                        </Link>
 
-                            className="mt-8 inline-block rounded gradient-primary bg-gradient-to-l hover:scale-110 px-12 py-3 text-sm font-medium text-white transition"
-                        >
-                            Download My Resume
-                        </Button>
                     </div>
 
                     <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
