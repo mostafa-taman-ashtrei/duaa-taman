@@ -31,6 +31,13 @@ export const constructMetadata = ({
                 },
             ],
         },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description,
+            images: [image],
+            creator: "@appnamehandle", // TODO: app twitter handle goes here.
+        },
         icons,
         metadataBase: new URL("https://duaataman.vercel.app/"),
         ...(noIndex && {

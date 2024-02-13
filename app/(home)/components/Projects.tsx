@@ -14,7 +14,7 @@ const projectCategories = [
         name: "Video Creation",
         icon: <Camera className="text-pink-600" size={40} />,
         url: "/videos",
-        desc: "I am not afraid to get in front of the camera when I need to. Thanks to my skills I can create, edit and publish a video all by myself."
+        desc: "I am not afraid to get in front of the camera when I need to. Thanks to my skills I can create, edit and publish a video all by myself. Check out some of my handy work"
     },
     {
         name: "Script Writing",
