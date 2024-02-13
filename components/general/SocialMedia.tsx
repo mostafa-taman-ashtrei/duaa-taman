@@ -1,10 +1,12 @@
-import { FaBehance, FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip";
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
+import { FaBehance, FaFacebookF, FaInstagram, FaLinkedinIn, FaTiktok, FaWhatsapp } from "react-icons/fa";
 
 import Link from "next/link";
 
@@ -52,17 +54,21 @@ const SocialMedia: React.FC<SocialMediaProps> = ({ text }) => {
                 </span>
 
                 <span className="p-2 rounded-full bg-gradient-to-b gradient-primary hover:scale-110">
-                    <TooltipProvider>
-                        <Tooltip>
-                            <TooltipTrigger asChild>
-                                <FaWhatsapp size={25} className="cursor-pointer" />
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p>01003411165</p>
-                            </TooltipContent>
-                        </Tooltip>
-                    </TooltipProvider>
+                    <Dialog>
+                        <DialogTrigger asChild>
+                            <FaWhatsapp size={25} className="cursor-pointer" />
+                        </DialogTrigger>
+                        <DialogContent>
+                            <DialogHeader>
+                                <DialogTitle>This is my main number | 01003411165</DialogTitle>
+                                <DialogDescription>
+                                    You can use this number to reach me on WhatsApp, Telegram, iMessage or just regualr SMS and calls.
+                                </DialogDescription>
+                            </DialogHeader>
+                        </DialogContent>
+                    </Dialog>
                 </span>
+
             </div>
         </div>
     );

@@ -48,7 +48,7 @@ const ProjectPage: React.FC = () => {
                     <GradientText text="Video Projects" />
                 </h2>
                 <p className="text-center text-gray-600">
-                    Explore some of my projects. Choose a category and let the magic beign
+                    I do not only work behind the scenes. Every now and then I like to get in front of the camera as well. Take a look and see for yourself
                 </p>
 
                 <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">

@@ -8,25 +8,25 @@ const projectCategories = [
         name: "Video Editing",
         icon: <Video className="text-pink-600" size={40} />,
         url: "/editing",
-        desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur saepe laborum."
+        desc: "Video editing is my bread & butter. I am fluent in all the major software including but not limited to Davinci Resolve, Adobe primere, final cut and more."
     },
     {
         name: "Video Creation",
         icon: <Camera className="text-pink-600" size={40} />,
         url: "/videos",
-        desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur saepe laborum."
+        desc: "I am not afraid to get in front of the camera when I need to. Thanks to my skills I can create, edit and publish a video all by meyself."
     },
     {
         name: "Script Writing",
         icon: <Pencil className="text-pink-600" size={40} />,
         url: "/scripts",
-        desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur saepe laborum."
+        desc: "\"A great video starts with a great script\" That is why I work hard to polish my script writing skills. I can write scripts in both Arabic & English"
     },
     {
         name: "Graphic Design",
         icon: <Brush className="text-pink-600" size={40} />,
         url: "https://www.behance.net/doaataman1",
-        desc: " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam fugit consequuntur saepe laborum."
+        desc: "In this day and age thanks to social media graphic design is an essential tool for anyone in any field ... take a look at what I can do."
     },
 ];
 

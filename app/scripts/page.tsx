@@ -3,14 +3,12 @@
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-import { ExternalLink, FileText, Ghost, ShieldX } from "lucide-react";
+import { FileText, Ghost, ShieldX } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import { DocumentType } from "@/types/ui";
 import GradientText from "@/components/general/GradientText";
 import GridLoader from "react-spinners/GridLoader";
 import Link from "next/link";
-import PdfFullScreen from "./components/PDFFullScreen";
 import { pdfjs } from "react-pdf";
 import useSWR from "swr";
 
@@ -51,21 +49,22 @@ const ScriptsPage: React.FC = () => {
                 <h2 className="text-3xl font-bold tracki text-center sm:text-5xl dark:text-gray-50">
                     <GradientText text="Scripts Projects" />
                     <p className="text-center text-base text-gray-600">
-                        Explore some of my projects. Choose a category and let the magic beign
+                        Here is a great collection of all the scripts I have written, feel free to send me any feedback or comments on any platform
                     </p>
 
 
                     <ul className="mb-2 mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {data.resources.map((file: DocumentType) => (
                             <li
-                                className="col-span-1 divide-y divide-gray-400 rounded-lg hover:scale-105 bg-gray-300 transition dark:divide-black dark:bg-zinc-900"
+                                className="col-span-1 p-4 divide-y divide-gray-400 rounded-lg hover:scale-105 bg-gray-300 transition dark:divide-black dark:bg-zinc-900"
                                 key={file.asset_id}
                             >
                                 <Link
                                     href={file.url}
+                                    target="_"
                                     className="flex flex-col gap-1"
                                 >
-                                    <div className="flex w-full items-center justify-between space-x-6 px-6 pt-6">
+                                    <div className="flex w-full items-center justify-between space-x-6 px-6">
                                         <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-r gradient-primary text-white">
                                             <FileText />
                                         </div>
@@ -80,7 +79,7 @@ const ScriptsPage: React.FC = () => {
                                     </div>
                                 </Link>
 
-                                <div className="mt-4 flex flex-row items-center justify-center px-2 py-2  text-xs text-zinc-500">
+                                {/* <div className="mt-4 flex flex-row items-center justify-center px-2 py-2  text-xs text-zinc-500">
                                     <div className="flex flex-row items-center justify-center gap-4">
                                         <a href={file.url} target="_">
                                             <Button
@@ -94,7 +93,7 @@ const ScriptsPage: React.FC = () => {
                                     </div>
 
                                     <PdfFullScreen fileUrl={file.url} />
-                                </div>
+                                </div> */}
                             </li>
                         ))}
                     </ul>
