@@ -11,7 +11,7 @@ cloudinary.config({
 
 export const GET = async () => {
     const data = await cloudinary.api
-        .resources({ resource_type: "image", type: "upload", prefix: "scripts", format: "pdf", invalidate: true }, function (error, result) {
+        .resources({ resource_type: "image", type: "upload", prefix: "scripts", format: "pdf", invalidate: true, cache: false }, function (error, result) {
             if (result) return result;
             if (error) throw new Error(error.message);
         })
