@@ -14,8 +14,10 @@ import useSWR from "swr";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
+export const fetchCache = "force-no-store";
+
 const fetcher = async (url: string) => {
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) {
         throw new Error("Failed to fetch data");
     }

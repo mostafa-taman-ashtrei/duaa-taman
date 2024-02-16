@@ -12,12 +12,14 @@ import { VideoType } from "@/types/ui";
 import useSWR from "swr";
 
 const fetcher = async (url: string) => {
-    const response = await fetch(url);
+    const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) {
         throw new Error("Failed to fetch data");
     }
     return response.json();
 };
+
+export const fetchCache = "force-no-store";
 
 const VideoEditingPage: React.FC = () => {
     const { data, error, isLoading } = useSWR("/api/editing", fetcher);
