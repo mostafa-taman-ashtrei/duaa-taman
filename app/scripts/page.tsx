@@ -4,28 +4,51 @@ import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
 import { FileText, Ghost, ShieldX } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { DocumentType } from "@/types/ui";
 import GradientText from "@/components/general/GradientText";
 import GridLoader from "react-spinners/GridLoader";
 import Link from "next/link";
-import { pdfjs } from "react-pdf";
-import useSWR from "swr";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+// import useSWR from "swr";
 
 export const fetchCache = "force-no-store";
 
-const fetcher = async (url: string) => {
-    const response = await fetch(url, { cache: "no-store" });
-    if (!response.ok) {
-        throw new Error("Failed to fetch data");
-    }
-    return response.json();
-};
+// const fetcher = async (url: string) => {
+//     const response = await fetch(url, { cache: "no-store" });
+//     if (!response.ok) {
+//         throw new Error("Failed to fetch data");
+//     }
+//     return response.json();
+// };
 
 const ScriptsPage: React.FC = () => {
-    const { data, error, isLoading } = useSWR("/api/scripts", fetcher);
+    // const { data, error, isLoading } = useSWR("/api/scripts", fetcher);
+
+    const [data, setData] = useState<DocumentType[] | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<unknown | null>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch("/api/scripts", { cache: "no-store" });
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+                const data = await response.json();
+                console.log(data);
+                setData(data.resources);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     if (isLoading) return <div className="flex justify-center h-screen items-center">
         <GridLoader color="#7e22ce" className="justify-center" size={30} />
@@ -38,7 +61,7 @@ const ScriptsPage: React.FC = () => {
         </p>
     </div>;
 
-    if (data === undefined) return <div className="mx-auto max-w-screen-xl px-4 py-8 h-screen sm:px-6 sm:py-12 lg:py-9">
+    if (data === undefined || data === null) return <div className="mx-auto max-w-screen-xl px-4 py-8 h-screen sm:px-6 sm:py-12 lg:py-9">
         <p className="text-neutral-500 flex flex-col gap-3  p-8 h-screen items-center justify-center">
             <Ghost size={50} />
             No projects in this category yet 😅 ... Come back later I always update my work.
@@ -56,7 +79,7 @@ const ScriptsPage: React.FC = () => {
 
 
                     <ul className="mb-2 mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {data.resources.map((file: DocumentType) => (
+                        {data.map((file: DocumentType) => (
                             <li
                                 className="col-span-1 p-4 divide-y divide-gray-400 rounded-lg hover:scale-105 bg-gray-300 transition dark:divide-black dark:bg-zinc-900"
                                 key={file.asset_id}
