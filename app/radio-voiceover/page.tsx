@@ -22,7 +22,7 @@ const fetcher = async (url: string) => {
 };
 
 const ProjectPage: React.FC = () => {
-    const { data, error, isLoading } = useSWR("/api/videos", fetcher);
+    const { data, error, isLoading } = useSWR("/api/audio", fetcher);
 
     if (isLoading) return <div className="flex justify-center h-screen items-center">
         <GridLoader color="#7e22ce" className="justify-center" size={30} />
@@ -47,13 +47,13 @@ const ProjectPage: React.FC = () => {
         <section>
             <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
                 <h2 className="text-3xl font-bold tracki text-center sm:text-5xl dark:text-gray-50">
-                    <GradientText text="Video Projects" />
+                    <GradientText text="Radio & Voice Over Projects" />
                 </h2>
                 <p className="text-center text-gray-600">
-                    I do not only work behind the scenes. Every now and then I like to get in front of the camera as well. Take a look and see for yourself
+                    Videos are not my only area of expertise, but I can also do voice over & all kinds of audio content when needed.
                 </p>
 
-                <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
                     {
                         data !== undefined && data.resources.map((video: VideoType) => (
                             <div
@@ -68,10 +68,7 @@ const ProjectPage: React.FC = () => {
                                         controls
                                         fallbackContent="Your browser does not support HTML5 video tags."
                                         format="webm"
-
                                     />
-
-                                    <p className="text-lg rounded-lg bg-gradient-to-r gradient-primary text-black text-center">{video.public_id.split("/")[1]}</p>
                                 </CloudinaryContext>
                             </div>
                         ))}

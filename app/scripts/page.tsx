@@ -4,51 +4,25 @@ import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
 import { FileText, Ghost, ShieldX } from "lucide-react";
-import { useEffect, useState } from "react";
 
 import { DocumentType } from "@/types/ui";
 import GradientText from "@/components/general/GradientText";
 import GridLoader from "react-spinners/GridLoader";
 import Link from "next/link";
-
-// import useSWR from "swr";
+import useSWR from "swr";
 
 export const fetchCache = "force-no-store";
 
-// const fetcher = async (url: string) => {
-//     const response = await fetch(url, { cache: "no-store" });
-//     if (!response.ok) {
-//         throw new Error("Failed to fetch data");
-//     }
-//     return response.json();
-// };
+const fetcher = async (url: string) => {
+    const response = await fetch(url, { cache: "no-store" });
+    if (!response.ok) {
+        throw new Error("Failed to fetch data");
+    }
+    return response.json();
+};
 
 const ScriptsPage: React.FC = () => {
-    // const { data, error, isLoading } = useSWR("/api/scripts", fetcher);
-
-    const [data, setData] = useState<DocumentType[] | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState<unknown | null>(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch("/api/scripts", { cache: "no-store" });
-                if (!response.ok) {
-                    throw new Error("Failed to fetch data");
-                }
-                const data = await response.json();
-                console.log(data);
-                setData(data.resources);
-            } catch (error) {
-                setError(error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        fetchData();
-    }, []);
+    const { data, error, isLoading } = useSWR("/api/scripts", fetcher);
 
     if (isLoading) return <div className="flex justify-center h-screen items-center">
         <GridLoader color="#7e22ce" className="justify-center" size={30} />
@@ -79,7 +53,7 @@ const ScriptsPage: React.FC = () => {
 
 
                     <ul className="mb-2 mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                        {data.map((file: DocumentType) => (
+                        {data !== undefined && data.resources.map((file: DocumentType) => (
                             <li
                                 className="col-span-1 p-4 divide-y divide-gray-400 rounded-lg hover:scale-105 bg-gray-300 transition dark:divide-black dark:bg-zinc-900"
                                 key={file.asset_id}
@@ -103,22 +77,6 @@ const ScriptsPage: React.FC = () => {
                                         </div>
                                     </div>
                                 </Link>
-
-                                {/* <div className="mt-4 flex flex-row items-center justify-center px-2 py-2  text-xs text-zinc-500">
-                                    <div className="flex flex-row items-center justify-center gap-4">
-                                        <a href={file.url} target="_">
-                                            <Button
-                                                variant="ghost"
-                                                className="gap-1.5"
-                                                size="icon"
-                                            >
-                                                <ExternalLink className="h-4 w-4 cursor-pointer" />
-                                            </Button>
-                                        </a>
-                                    </div>
-
-                                    <PdfFullScreen fileUrl={file.url} />
-                                </div> */}
                             </li>
                         ))}
                     </ul>

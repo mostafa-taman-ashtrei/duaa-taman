@@ -8,10 +8,9 @@ cloudinary.config({
 });
 
 
-
 export const GET = async () => {
     const data = await cloudinary.api
-        .resources({ resource_type: "video", prefix: "editing", type: "upload", cache: false, max_results: 100 }, function (error, result) {
+        .resources({ resource_type: "video", prefix: "radio", type: "upload", cache: false }, function (error, result) {
             if (result) return result;
             if (error) throw new Error(error.message);
         })

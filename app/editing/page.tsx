@@ -53,12 +53,12 @@ const VideoEditingPage: React.FC = () => {
                     Video editing is my bread and butter, here is some projects I am proud of.
                 </p>
 
-                <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 my-8">
                     {
                         data !== undefined && data.resources.map((video: VideoType) => (
                             <div
                                 key={video.public_id}
-                                className="w-100 h-100"
+                                className="relative w-full"
                             >
                                 <CloudinaryContext cloud_name="codedog">
                                     <Video
@@ -68,8 +68,10 @@ const VideoEditingPage: React.FC = () => {
                                         controls
                                         fallbackContent="Your browser does not support HTML5 video tags."
                                         format="webm"
+                                        className="h-[500px] bg-zinc-700"
                                     />
                                 </CloudinaryContext>
+                                <p className="text-lg rounded-lg bg-gradient-to-r gradient-primary text-black text-center">{video.public_id.split("/")[1]}</p>
                             </div>
                         ))}
                 </div>
