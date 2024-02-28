@@ -67,7 +67,6 @@ const VideoEditingPage: React.FC = () => {
                                         secure="true"
                                         controls
                                         fallbackContent="Your browser does not support HTML5 video tags."
-                                        format="webm"
                                         className="h-[500px] bg-zinc-700"
                                     />
                                 </CloudinaryContext>
