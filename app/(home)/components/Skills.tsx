@@ -46,7 +46,7 @@ const Skills: React.FC = () => {
                             set of skills. If you want more details you can check out my resume below.
                         </p>
 
-                        <Link href="https://drive.google.com/file/d/1ha6FX42BSepKRtMuxu9FwaRyDIHE7ebI/view" target="_">
+                        <Link href="https://drive.google.com/file/d/1VXqcm9lb8SOAyRQuQdZ889vh6bx7lyou/view" target="_">
                             <Button
                                 className="mt-8 inline-block rounded gradient-primary bg-gradient-to-l hover:scale-110 px-12 py-3 text-sm font-medium text-white transition"
                             >
