@@ -14,7 +14,7 @@ type ConstructMetadataParams = {
 
 export const constructMetadata = ({
     title = "Duaa Taman",
-    description = "A professional video editor, graph designer and content creator with a major in  radio & tv from Cairo university.",
+    description = "A professional video editor, graphic designer and content creator with a major in  radio & tv from Cairo university.",
     image = "/images/hero 1.jpeg",
     icons = "/favicon.ico",
     noIndex = false,

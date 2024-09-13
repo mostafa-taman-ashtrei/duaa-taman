@@ -1,4 +1,4 @@
-import { Brush, Camera, Pencil, Video } from "lucide-react";
+import { Brush, Camera, Mic2, Pencil, Video } from "lucide-react";
 
 import GradientText from "@/components/general/GradientText";
 import Link from "next/link";
@@ -28,6 +28,12 @@ const projectCategories = [
         url: "https://www.behance.net/doaataman1",
         desc: "In this day and age thanks to social media graphic design is an essential tool for anyone in any field ... take a look at what I can do."
     },
+    {
+        name: "Voice Over & Podcasts",
+        icon: <Mic2 className="text-pink-600" size={40} />,
+        url: "/radio-voiceover",
+        desc: "Visual meida is not the only way to communicate. I can also do voice over, podcasts and all kinds of audio content."
+    },
 ];
 
 const Projects: React.FC = () => {
@@ -43,7 +49,10 @@ const Projects: React.FC = () => {
 
                 <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
                     {
-                        projectCategories.map((projectCategory) => <Link key={projectCategory.name} href={projectCategory.url}>
+                        projectCategories.map((projectCategory, index) => <Link
+                            key={projectCategory.name}
+                            className={index === projectCategories.length - 1 ? "col-span-2" : ""}
+                            href={projectCategory.url}>
                             <div
                                 key={projectCategory.name}
                                 className="block rounded-xl border bg-gray-300 dark:bg-gray-800 cursor-pointer border-gray-800 p-8 shadow-lg transition hover:border-pink-500/10 hover:shadow-pink-500"

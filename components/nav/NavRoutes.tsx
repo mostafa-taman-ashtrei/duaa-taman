@@ -31,7 +31,7 @@ const NavRoutes: React.FC<React.HTMLAttributes<HTMLElement>> = ({ className, ...
             active: false,
         },
         {
-            href: `https://drive.google.com/file/d/1ha6FX42BSepKRtMuxu9FwaRyDIHE7ebI/view`,
+            href: `https://drive.google.com/file/d/1VXqcm9lb8SOAyRQuQdZ889vh6bx7lyou/view`,
             label: "Resume",
             active: false,
         }
