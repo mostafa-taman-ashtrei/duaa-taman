@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
                     {
                         projectCategories.map((projectCategory, index) => <Link
                             key={projectCategory.name}
-                            className={index === projectCategories.length - 1 ? "col-span-2" : ""}
+                            className={index === projectCategories.length - 1 ? "col-span-1 md:col-span-2" : ""}
                             href={projectCategory.url}>
                             <div
                                 key={projectCategory.name}

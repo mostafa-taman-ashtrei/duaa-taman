@@ -67,9 +67,10 @@ const ProjectPage: React.FC = () => {
                                         secure="true"
                                         controls
                                         fallbackContent="Your browser does not support HTML5 video tags."
+                                        className="md:h-[500px] md:w-[500px] bg-zinc-700"
                                     />
 
-                                    <p className="text-lg rounded-lg bg-gradient-to-r gradient-primary text-black text-center">{video.public_id.split("/")[1]}</p>
+                                    <p className="text-lg rounded-lg text-center">{video.public_id.split("/")[1]}</p>
                                 </CloudinaryContext>
                             </div>
                         ))}
